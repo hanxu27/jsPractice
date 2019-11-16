@@ -23,7 +23,8 @@ const betterTwoSum = (nums, target) => {
     numsHash[num] = i;
   });
   nums.forEach((num, i) => {
-    if (numsHash[target - num]) {
+    console.log(i);
+    if (numsHash[target - num] && i !== numsHash[target - num]) {
       index1 = i;
       index2 = numsHash[target - num];
     }
